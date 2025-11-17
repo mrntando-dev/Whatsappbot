@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: whatsapp-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: GOOGLE_AI_KEY
+        sync: false
+      - key: UNSPLASH_ACCESS_KEY
+        sync: false
+    autoDeploy: true
